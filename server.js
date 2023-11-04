@@ -1,8 +1,21 @@
 const express = require("express");
 const cors = require("cors");
+const cookieParser = require("cookie-parser");
 const { MongoClient, ServerApiVersion } = require("mongodb");
 require("dotenv").config();
+
 const app = express();
+
+// middlewares
+app.use(
+  cors({
+    origin: ["*", "http://localhost:5173"],
+    credentials: true,
+    optionsSuccessStatus: 200,
+  })
+);
+app.use(express.json());
+app.use(cookieParser());
 
 const port = process.env.PORT || 5000;
 
@@ -24,8 +37,18 @@ async function run() {
 
     const database = client.db("booksDB");
 
-      const bookCollection = database.collection("books");
-      
+    const bookCollection = database.collection("books");
+
+    //   routes
+    app.get("/allBook", async (req, res) => {
+      try {
+        const result = await bookCollection.find().toArray();
+        res.status(200).send(result);
+      } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: "Error Fetching Books" });
+      }
+    });
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
