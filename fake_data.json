@@ -1,0 +1,670 @@
+[
+    {
+        "id": 1,
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "category": "Fiction",
+        "publication_year": 1960,
+        "ISBN": "0061120081",
+        "quantity": 5,
+        "image": {
+            "cover": "https://i.ibb.co/7pwrrG9/book-cover-To-Kill-a-Mockingbird-many-1961.jpg",
+            "page_demo": "https://i.ibb.co/dLPRQDJ/71t-ZKJuo-MRL-AC-UF1000-1000-QL80.jpg"
+        },
+        "short_description": "A classic novel of racial injustice in the American South.",
+        "description": "To Kill a Mockingbird is a powerful story of racial injustice and moral growth set in the American South during the Great Depression. The novel explores themes of racism, empathy, and the loss of innocence. It also delves into the complexities of small-town life and the moral growth of its young protagonist, Scout Finch.",
+        "rating": {
+            "rate": 4.5,
+            "count": 44
+        }
+    },
+    {
+        "id": 2,
+        "title": "1984",
+        "author": "George Orwell",
+        "category": "Dystopian",
+        "publication_year": 1949,
+        "ISBN": "0451524934",
+        "quantity": 3,
+        "image": {
+            "cover": "https://i.ibb.co/Cw4G9LB/1984-by-George-Orwell-1-1200x1963.jpg",
+            "page_demo": "https://i.ibb.co/9gz7jqs/orwell1984preywo-0002.jpg"
+        },
+        "short_description": "A chilling portrayal of a totalitarian society.",
+        "description": "1984 is a dystopian novel that paints a bleak picture of a totalitarian society under constant surveillance. It is a thought-provoking and cautionary tale about the dangers of oppressive governments. The novel explores the consequences of a government's control over truth and information and the impact on individual freedom and thought.",
+        "rating": {
+            "rate": 4.0,
+            "count": 37
+        }
+    },
+    {
+        "id": 3,
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "category": "Fiction",
+        "publication_year": 1925,
+        "ISBN": "9780743273565",
+        "quantity": 7,
+        "image": {
+            "cover": "https://i.ibb.co/ZHXbgpw/the-great-gatsby-9781982146702-lg.jpg",
+            "page_demo": "https://i.ibb.co/z6M188h/page35-1024px-The-Great-Gatsby-1925-djvu.jpg"
+        },
+        "short_description": "A tale of love, wealth, and the American Dream.",
+        "description": "The Great Gatsby is a classic novel that explores the themes of love, wealth, and the pursuit of the American Dream. Set in the Roaring Twenties, it provides a glimpse into the excesses of the era, the unfulfilled dreams of its characters, and the ultimate disillusionment.",
+        "rating": {
+            "rate": 4.2,
+            "count": 40
+        }
+    },
+    {
+        "id": 4,
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "category": "Romance",
+        "publication_year": 1813,
+        "ISBN": "9780141439518",
+        "quantity": 4,
+        "image": {
+            "cover": "https://i.ibb.co/CWVZKBX/61ilfuum-AL-AC-UF894-1000-QL80.jpg",
+            "page_demo": "https://i.ibb.co/1QrCK8g/b40d1371dc152bbf8d930d9b6fe4e07f.jpg"
+        },
+        "short_description": "A timeless love story with social commentary.",
+        "description": "Pride and Prejudice is a timeless romance novel that also provides social commentary on class and marriage in 19th-century England. It is beloved for its characters and wit. The novel revolves around the misunderstandings, prejudices, and eventual love story of Elizabeth Bennet and Mr. Darcy.",
+        "rating": {
+            "rate": 4.7,
+            "count": 49
+        }
+    },
+    {
+        "id": 5,
+        "title": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "category": "Fiction",
+        "publication_year": 1951,
+        "ISBN": "9780316769174",
+        "quantity": 2,
+        "image": {
+            "cover": "https://i.ibb.co/nRsCHFz/Reproduction-cover-edition-The-Catcher-in-the.jpg",
+            "page_demo": "https://i.ibb.co/WvrpgTx/j-d-salinger-the-catcher-in-the-rye-page-1-quote-print-fowler-astbury.jpg"
+        },
+        "short_description": "A coming-of-age novel about teenage rebellion.",
+        "description": "The Catcher in the Rye is a classic coming-of-age novel that follows the rebellious teenager Holden Caulfield as he navigates the challenges of growing up in New York City. The novel delves into Holden's search for authenticity and the phoniness he perceives in the adult world.",
+        "rating": {
+            "rate": 4.3,
+            "count": 38
+        }
+    },
+    {
+        "id": 29,
+        "title": "The Rosie Project",
+        "author": "Graeme Simsion",
+        "category": "Romance",
+        "publication_year": 2013,
+        "ISBN": "9781476728742",
+        "quantity": 7,
+        "image": {
+            "cover": "https://i.ibb.co/712RCgF/the-rosie-project-9781476729091-hr.jpg",
+            "page_demo": "https://i.ibb.co/CKMjDzf/09-1984.png"
+        },
+        "short_description": "A heartwarming and unconventional love story.",
+        "description": "Graeme Simsion's 'The Rosie Project' is a heartwarming romance that follows the story of Don Tillman, a genetics professor with social challenges, as he embarks on a project to find the perfect life partner. However, his plans take an unexpected turn when he meets Rosie, a free-spirited bartender.",
+        "rating": {
+            "rate": 4.3,
+            "count": 37
+        }
+    },
+    {
+        "id": 6,
+        "title": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "category": "Fantasy",
+        "publication_year": 1937,
+        "ISBN": "9780618260300",
+        "quantity": 6,
+        "image": {
+            "cover": "https://i.ibb.co/Sdy28Bn/The-hobbit.jpg",
+            "page_demo": "https://i.ibb.co/fQgSD0M/hobbit-prv-12-980911.jpg"
+        },
+        "short_description": "An epic fantasy adventure in Middle-earth.",
+        "description": "The Hobbit is an epic fantasy adventure that takes readers to the enchanting world of Middle-earth. Join Bilbo Baggins on his unexpected journey to riches and dragons. The story is filled with mythical creatures, magical artifacts, and heroism.",
+        "rating": {
+            "rate": 4.6,
+            "count": 42
+        }
+    },
+    {
+        "id": 7,
+        "title": "The Hunger Games",
+        "author": "Suzanne Collins",
+        "category": "Dystopian",
+        "publication_year": 2008,
+        "ISBN": "9780439023481",
+        "quantity": 8,
+        "image": {
+            "cover": "https://i.ibb.co/KmWRt7R/The-Hunger-Games.jpg",
+            "page_demo": "https://i.ibb.co/fF4tBCR/51.jpg"
+        },
+        "short_description": "A thrilling dystopian tale of survival and rebellion.",
+        "description": "The Hunger Games is a thrilling dystopian novel that follows Katniss Everdeen's journey in a deadly competition. It's a story of survival, rebellion, and resilience as Katniss confronts a brutal government in a post-apocalyptic world.",
+        "rating": {
+            "rate": 4.4,
+            "count": 45
+        }
+    },
+    {
+        "id": 8,
+        "title": "Harry Potter and the Sorcerer's Stone",
+        "author": "J.K. Rowling",
+        "category": "Fantasy",
+        "publication_year": 1997,
+        "ISBN": "9780590353403",
+        "quantity": 10,
+        "image": {
+            "cover": "https://i.ibb.co/0c2YxRR/Harry-Potter-and-the-Philosopher-s-Stone-Bloomsbury-2014-Children-s-Edition-Paperback-and-Hardcover.jpg",
+            "page_demo": "https://i.ibb.co/njYjpGH/37f0b1a6700d2085a921aea6b4cb0845.jpg"
+        },
+        "short_description": "The start of a magical journey at Hogwarts.",
+        "description": "Harry Potter and the Sorcerer's Stone introduces readers to the magical world of Hogwarts and follows Harry's adventures as he discovers his destiny as a wizard. The novel is a tale of friendship, bravery, and the battle between good and evil.",
+        "rating": {
+            "rate": 4.9,
+            "count": 50
+        }
+    },
+    {
+        "id": 40,
+        "title": "Brave New World",
+        "author": "Aldous Huxley",
+        "category": "Fiction",
+        "publication_year": 1932,
+        "ISBN": "9780060850524",
+        "quantity": 6,
+        "image": {
+            "cover": "https://i.ibb.co/89FsKcC/220px-Brave-New-World-First-Edition.jpg",
+            "page_demo": "https://i.ibb.co/MN7jFTT/006910908-1-7ea3a5eac554afe807bdecfb7c32716c.png"
+        },
+        "short_description": "A dystopian vision of a future society.",
+        "description": "Aldous Huxley's 'Brave New World' is a dystopian novel that presents a vision of a future society characterized by technological advancements and social control. The story follows Bernard Marx, who questions the conformity and artificial happiness of his world.",
+        "rating": {
+            "rate": 4.4,
+            "count": 46
+        }
+    },
+    {
+        "id": 30,
+        "title": "Outlander",
+        "author": "Diana Gabaldon",
+        "category": "Romance",
+        "publication_year": 1991,
+        "ISBN": "9780440242949",
+        "quantity": 6,
+        "image": {
+            "cover": "https://i.ibb.co/0cxMQFj/10964.jpg",
+            "page_demo": "https://i.ibb.co/88vGB7q/fullpage.jpg"
+        },
+        "short_description": "A time-traveling romance set in historical Scotland.",
+        "description": "Diana Gabaldon's 'Outlander' is a captivating romance novel that combines time travel, historical drama, and passionate love. The story follows Claire Randall, a nurse who is transported back in time to 18th-century Scotland, where she meets a dashing Scottish warrior named Jamie Fraser.",
+        "rating": {
+            "rate": 4.4,
+            "count": 41
+        }
+    },
+    {
+        "id": 40,
+        "title": "The Night Circus",
+        "author": "Erin Morgenstern",
+        "category": "Fiction",
+        "publication_year": 2011,
+        "ISBN": "9780307744432",
+        "quantity": 6,
+        "image": {
+            "cover": "https://i.ibb.co/m50m2Qy/9361589.jpg",
+            "page_demo": "https://i.ibb.co/HzWcKNQ/301.jpg"
+        },
+        "short_description": "A magical and enchanting competition in a mystical circus.",
+        "description": "Erin Morgenstern's 'The Night Circus' is a tale of a magical competition between two young illusionists, Celia and Marco, who are bound by destiny. Their performances take place in the enchanting and otherworldly Night Circus, where their talents are put to the test.",
+        "rating": {
+            "rate": 4.5,
+            "count": 55
+        }
+    },
+    {
+        "id": 31,
+        "title": "The Notebook",
+        "author": "Nicholas Sparks",
+        "category": "Romance",
+        "publication_year": 1996,
+        "ISBN": "9780446605236",
+        "quantity": 5,
+        "image": {
+            "cover": "https://i.ibb.co/D7QWsgY/33648131.jpg",
+            "page_demo": "https://i.ibb.co/K0f6tmC/thumb-1200-1697.png"
+        },
+        "short_description": "A heartfelt tale of enduring love.",
+        "description": "Nicholas Sparks' 'The Notebook' is a heartfelt romance that tells the story of Noah and Allie, a young couple who fall in love during a summer romance. Despite their social differences, their love endures over the years, and the novel explores themes of love, memory, and commitment.",
+        "rating": {
+            "rate": 4.5,
+            "count": 43
+        }
+    },
+    {
+        "id": 10,
+        "title": "The Name of the Wind",
+        "author": "Patrick Rothfuss",
+        "category": "Fantasy",
+        "publication_year": 2007,
+        "ISBN": "9780756404741",
+        "quantity": 12,
+        "image": {
+            "cover": "https://i.ibb.co/hmxkjvH/510x-U0usi-DL.jpg",
+            "page_demo": "https://i.ibb.co/m8Y8p1N/fullpage.jpg"
+        },
+        "short_description": "A mesmerizing tale of magic and adventure.",
+        "description": "The Name of the Wind is the first book in the King killer Chronicle series. It tells the story of Kvothe, a gifted musician and magician, as he grows into a legendary figure. This epic fantasy novel is known for its captivating storytelling and intricate world-building.",
+        "rating": {
+            "rate": 4.7,
+            "count": 60
+        }
+    },
+    {
+        "id": 11,
+        "title": "A Brief History of Time",
+        "author": "Stephen Hawking",
+        "category": "Science & Math",
+        "publication_year": 1988,
+        "ISBN": "9780553380163",
+        "quantity": 15,
+        "image": {
+            "cover": "https://i.ibb.co/mqBj4Md/3869.jpg",
+            "page_demo": "https://i.ibb.co/S5txshV/fullpage.jpg"
+        },
+        "short_description": "Exploring the mysteries of the universe.",
+        "description": "In 'A Brief History of Time,' Stephen Hawking delves into the fundamental questions of the universe, from the Big Bang to black holes. This book makes complex scientific concepts accessible to a wide audience.",
+        "rating": {
+            "rate": 4.6,
+            "count": 70
+        }
+    },
+    {
+        "id": 12,
+        "title": "The Code Book",
+        "author": "Simon Singh",
+        "category": "Science & Math",
+        "publication_year": 1999,
+        "ISBN": "9780385495325",
+        "quantity": 10,
+        "image": {
+            "cover": "https://i.ibb.co/Nt0WS2n/71f-SWKBI1-CL-AC-UF1000-1000-QL80.jpg",
+            "page_demo": "https://i.ibb.co/Ky2WhnM/fullpage.jpg"
+        },
+        "short_description": "Unraveling the history of secret codes and code-breaking.",
+        "description": "In 'The Code Book,' Simon Singh explores the history of secret codes, the art of code-breaking, and the impact of cryptography on history and technology. It's a fascinating journey through the world of codes and ciphers.",
+        "rating": {
+            "rate": 4.5,
+            "count": 55
+        }
+    },
+    {
+        "id": 13,
+        "title": "Cosmos",
+        "author": "Carl Sagan",
+        "category": "Science & Math",
+        "publication_year": 1980,
+        "ISBN": "9780345539434",
+        "quantity": 12,
+        "image": {
+            "cover": "https://i.ibb.co/3sJsshg/91-Cnrbd3-Jw-L-AC-UF1000-1000-QL80.jpg",
+            "page_demo": "https://i.ibb.co/wrrLL56/20210913042809-613ed35914cfa-cosmos-by-carl-sagan-ann-druyan-neil-degrasse-tysonpage1.png"
+        },
+        "short_description": "A poetic journey through the cosmos.",
+        "description": "In 'Cosmos,' Carl Sagan takes readers on a poetic and scientific journey through the cosmos, exploring the universe, the evolution of life, and the wonders of space. This book is a classic in popular science literature.",
+        "rating": {
+            "rate": 4.9,
+            "count": 80
+        }
+    },
+    {
+        "id": 14,
+        "title": "Gödel, Escher, Bach",
+        "author": "Douglas R. Hofstadter",
+        "category": "Science & Math",
+        "publication_year": 1979,
+        "ISBN": "9780465026562",
+        "quantity": 8,
+        "image": {
+            "cover": "https://i.ibb.co/BPkkPK3/51z-U0-Zk9z-LL-AC-UL600-SR600-600.jpg",
+            "page_demo": "https://i.ibb.co/7zvJRQN/largepreview.png"
+        },
+        "short_description": "A journey into the world of mathematics, art, and music.",
+        "description": "In 'Gödel, Escher, Bach,' Douglas R. Hofstadter explores the connections between the works of mathematician Kurt Gödel, artist M.C. Escher, and composer Johann Sebastian Bach. This book is a fascinating exploration of creativity and self-reference.",
+        "rating": {
+            "rate": 4.7,
+            "count": 65
+        }
+    },
+    {
+        "id": 35,
+        "title": "The Alchemist",
+        "author": "Paulo Coelho",
+        "category": "Fiction",
+        "publication_year": 1988,
+        "ISBN": "9780061120084",
+        "quantity": 6,
+        "image": {
+            "cover": "https://i.ibb.co/wWm8C5n/the-alchemist.jpg",
+            "page_demo": "https://i.ibb.co/nw1jvJf/3.jpg"
+        },
+        "short_description": "A philosophical and inspirational journey of self-discovery.",
+        "description": "Paulo Coelho's 'The Alchemist' is a philosophical and inspirational novel that tells the story of Santiago, a shepherd boy on a journey to find his personal legend. The book explores themes of destiny, dreams, and the pursuit of one's true purpose.",
+        "rating": {
+            "rate": 4.6,
+            "count": 48
+        }
+    },
+    {
+        "id": 15,
+        "title": "The Selfish Gene",
+        "author": "Richard Dawkins",
+        "category": "Science & Math",
+        "publication_year": 1976,
+        "ISBN": "9780198788607",
+        "quantity": 11,
+        "image": {
+            "cover": "https://i.ibb.co/ysbSPhn/51-b-Ibzo1m-L.jpg",
+            "page_demo": "https://i.ibb.co/5cbwnQD/largepreview.png"
+        },
+        "short_description": "Exploring the gene's-eye view of evolution.",
+        "description": "In 'The Selfish Gene,' Richard Dawkins introduces the concept of the 'selfish gene' and explains how genes shape the evolution of life on Earth. This book is a cornerstone of evolutionary biology literature.",
+        "rating": {
+            "rate": 4.8,
+            "count": 75
+        }
+    },
+    {
+        "id": 16,
+        "title": "The Elegant Universe",
+        "author": "Brian Greene",
+        "category": "Science & Math",
+        "publication_year": 1999,
+        "ISBN": "9780393046885",
+        "quantity": 9,
+        "image": {
+            "cover": "https://i.ibb.co/BVpzWNh/8049273.jpg",
+            "page_demo": "https://i.ibb.co/ggDH3yM/brian-greene-the-elegant-universe.webp"
+        },
+        "short_description": "A journey into the world of string theory and the universe's hidden dimensions.",
+        "description": "In 'The Elegant Universe,' Brian Greene explores the cutting-edge theories of string theory and the concept of hidden dimensions in the universe. This book offers a fascinating look at the frontiers of theoretical physics.",
+        "rating": {
+            "rate": 4.6,
+            "count": 60
+        }
+    },
+    {
+        "id": 23,
+        "title": "On Palestine",
+        "author": "Noam Chomsky and Ilan Pappé",
+        "category": "History",
+        "publication_year": 2015,
+        "ISBN": "978-0241973523",
+        "quantity": 7,
+        "image": {
+            "cover": "https://i.ibb.co/5h51kSM/41-KLPfl-Uq-QL.jpg",
+            "page_demo": "https://i.ibb.co/0yYp4xD/51utpg-G5zi-L-AC-UF1000-1000-QL80.jpg"
+        },
+        "short_description": "Insights into the Israeli-Palestinian conflict.",
+        "description": "In 'On Palestine,' Noam Chomsky and Ilan Pappé engage in a dialogue that offers insights into the Israeli-Palestinian conflict. They explore the historical context, challenges, and potential paths toward peace in the region.",
+        "rating": {
+            "rate": 4.2,
+            "count": 36
+        }
+    },
+    {
+        "id": 24,
+        "title": "Six Days of War",
+        "author": "Michael B. Oren",
+        "category": "History",
+        "publication_year": 2002,
+        "ISBN": "978-0345461926",
+        "quantity": 9,
+        "image": {
+            "cover": "https://i.ibb.co/6n71sc0/714-TMr-CHCw-L-AC-UF350-350-QL50.jpg",
+            "page_demo": "https://i.ibb.co/vv6Drd4/largepreview.png"
+        },
+        "short_description": "A detailed account of the Six-Day War in the Middle East.",
+        "description": "Michael B. Oren's 'Six Days of War' provides a comprehensive and gripping account of the Six-Day War in the Middle East. The book delves into the political and military strategies, as well as the key events that shaped this conflict and its impact on the region.",
+        "rating": {
+            "rate": 4.7,
+            "count": 42
+        }
+    },
+    {
+        "id": 25,
+        "title": "Arabs and Israelis: Conflict and Peacemaking in the Middle East",
+        "author": "Abdel Monem Said Aly, Shai Feldman, Khalil Shikaki",
+        "category": "History",
+        "publication_year": 2007,
+        "ISBN": "978-0231144347",
+        "quantity": 12,
+        "image": {
+            "cover": "https://i.ibb.co/nBXJqdQ/41o-IOrru7-IL.jpg",
+            "page_demo": "https://i.ibb.co/12HQxqM/largepreview.png"
+        },
+        "short_description": "An in-depth examination of the Arab-Israeli conflict and peace efforts.",
+        "description": "This comprehensive book, 'Arabs and Israelis: Conflict and Peacemaking in the Middle East,' offers a detailed analysis of the Arab-Israeli conflict and the various peacemaking initiatives that have shaped the region's history. It provides valuable insights into the complex dynamics of the Middle East.",
+        "rating": {
+            "rate": 4.3,
+            "count": 55
+        }
+    },
+    {
+        "id": 26,
+        "title": "In Search of Fatima: A Palestinian Story",
+        "author": "Ghada Karmi",
+        "category": "History",
+        "publication_year": 2002,
+        "ISBN": "978-1851274201",
+        "quantity": 8,
+        "image": {
+            "cover": "https://i.ibb.co/9wS3Trj/71-KULWrcom-L-AC-UF1000-1000-QL80.jpg",
+            "page_demo": "https://i.ibb.co/9v6jN2V/mini-magick20180817-21035-18bxma.png"
+        },
+        "short_description": "A personal narrative of the Palestinian experience.",
+        "description": "Ghada Karmi's 'In Search of Fatima' is a deeply personal and poignant narrative that provides an intimate account of the Palestinian experience and the impact of the Israeli-Palestinian conflict on the lives of ordinary people.",
+        "rating": {
+            "rate": 4.6,
+            "count": 38
+        }
+    },
+    {
+        "id": 27,
+        "title": "My Promised Land: The Triumph and Tragedy of Israel",
+        "author": "Ari Shavit",
+        "category": "History",
+        "publication_year": 2013,
+        "ISBN": "978-0812984644",
+        "quantity": 10,
+        "image": {
+            "cover": "https://i.ibb.co/8b8XQd7/A1b-TIe-Jhh-L-AC-UF1000-1000-QL80.jpg",
+            "page_demo": "https://i.ibb.co/hcBGNbc/91u-PG-d-Nb-RL-AC-UF350-350-QL80.jpg"
+        },
+        "short_description": "A compelling exploration of Israel's history.",
+        "description": "Ari Shavit's 'My Promised Land' offers a thought-provoking exploration of the history of Israel, delving into the triumphs and tragedies that have shaped the nation. The book provides a deep and personal look at the complexities of Israeli society and the challenges it has faced.",
+        "rating": {
+            "rate": 4.4,
+            "count": 45
+        }
+    },
+    {
+        "id": 19,
+        "title": "Sapiens: A Brief History of Humankind",
+        "author": "Yuval Noah Harari",
+        "category": "History",
+        "publication_year": 2011,
+        "ISBN": "9780062316097",
+        "quantity": 15,
+        "image": {
+            "cover": "https://i.ibb.co/B2XLhQN/Sapiens.jpg",
+            "page_demo": "https://i.ibb.co/wNzPrDH/81u-kt63k5-L-AC-UF1000-1000-QL80.jpg"
+        },
+        "short_description": "A sweeping history of human evolution and civilization.",
+        "description": "In 'Sapiens: A Brief History of Humankind,' Yuval Noah Harari takes readers on a sweeping journey through the history of humankind, from the emergence of Homo sapiens to the modern age. Harari's narrative explores the evolution of human societies, the development of culture, and the impact of technology, offering readers a profound reflection on the forces that have shaped our species."
+    },
+    {
+        "id": 20,
+        "title": "The Wright Brothers",
+        "author": "David McCullough",
+        "category": "History",
+        "publication_year": 2015,
+        "ISBN": "9781476728742",
+        "quantity": 8,
+        "image": {
+            "cover": "https://i.ibb.co/HFt2wvj/the-wright-brothers-9781476728759-hr.jpg",
+            "page_demo": "https://i.ibb.co/16Mj4nY/the-wright-brothers-by-david-mccullough-page3.webp"
+        },
+        "short_description": "Pioneers of aviation and the invention of the airplane.",
+        "description": "In 'The Wright Brothers,' David McCullough chronicles the remarkable journey of Orville and Wilbur Wright, two bicycle mechanics from Ohio who achieved the impossible by inventing the first powered, sustained, and controlled flight. McCullough's detailed account provides insights into the brothers' dedication, ingenuity, and the impact of their groundbreaking achievement on the world of aviation."
+    },
+    {
+        "id": 21,
+        "title": "1491: New Revelations of the Americas Before Columbus",
+        "author": "Charles C. Mann",
+        "category": "History",
+        "publication_year": 2005,
+        "ISBN": "9781400032051",
+        "quantity": 10,
+        "image": {
+            "cover": "https://i.ibb.co/1JJSm4X/05-A36577-9-EAD-4467-B0-CA-49-FD2227-F2-EB-Img400.jpg",
+            "page_demo": "https://i.ibb.co/FBP3xLm/mini-magick20180817-15159-1mml9q0.png"
+        },
+        "short_description": "Uncovering the rich history of pre-Columbian America.",
+        "description": "In '1491: New Revelations of the Americas Before Columbus,' Charles C. Mann challenges traditional views of the Americas before Columbus's arrival in 1492. Mann presents a compelling narrative that explores the advanced civilizations, complex societies, and environmental impact of indigenous peoples in the pre-Columbian Americas."
+    },
+    {
+        "id": 22,
+        "title": "The Diary of a Young Girl",
+        "author": "Anne Frank",
+        "category": "History",
+        "publication_year": 1947,
+        "ISBN": "9780553296983",
+        "quantity": 9,
+        "image": {
+            "cover": "https://i.ibb.co/zJZDNck/48855.jpg",
+            "page_demo": "https://i.ibb.co/r70X8Kd/mini-magick20190320-21032-1fb9i7g.png"
+        },
+        "short_description": "A poignant account of a Jewish girl's life during the Holocaust.",
+        "description": "In 'The Diary of a Young Girl,' Anne Frank's diary entries provide a poignant and personal account of her life in hiding during the Holocaust. Anne's writings offer a firsthand perspective on the challenges, hopes, and fears of a young Jewish girl living through one of the darkest chapters in history."
+    },
+    {
+        "id": 45,
+        "title": "A Song of Ice and Fire: A Game of Thrones",
+        "author": "George R.R. Martin",
+        "category": "Fantasy",
+        "publication_year": 1996,
+        "ISBN": "9780553573404",
+        "quantity": 8,
+        "image": {
+            "cover": "https://i.ibb.co/c8Qctb4/GOTMTI2.jpg",
+            "page_demo": "https://i.ibb.co/Wptjr8F/711r-Vw4-IWi-L-AC-UF1000-1000-QL80.jpg"
+        },
+        "short_description": "A tale of political intrigue and power struggles in a medieval world.",
+        "description": "George R.R. Martin's 'A Game of Thrones' is the first book in the 'A Song of Ice and Fire' series. It immerses readers in a medieval world of noble houses, political intrigue, and power struggles as they vie for control of the Iron Throne.",
+        "rating": {
+            "rate": 4.6,
+            "count": 63
+        }
+    },
+    {
+        "id": 43,
+        "title": "Mistborn: The Final Empire",
+        "author": "Brandon Sanderson",
+        "category": "Fantasy",
+        "publication_year": 2006,
+        "ISBN": "9780765350381",
+        "quantity": 5,
+        "image": {
+            "cover": "https://i.ibb.co/cyCbf36/81-NGmugxg-SL-AC-UF1000-1000-QL80.jpg",
+            "page_demo": "https://i.ibb.co/jLBgGHw/9781250318541-5.jpg"
+        },
+        "short_description": "A world of magic and rebellion against a dark lord.",
+        "description": "Brandon Sanderson's 'Mistborn: The Final Empire' is the first book in the 'Mistborn' series. It is set in a world where a dark lord, the Lord Ruler, reigns supreme. Vin, a young street thief, discovers her magical abilities and joins a rebellion to overthrow the oppressive regime.",
+        "rating": {
+            "rate": 4.4,
+            "count": 52
+        }
+    },
+    {
+        "id": 41,
+        "title": "Harry Potter and the Chamber of Secrets",
+        "author": "J.K. Rowling",
+        "category": "Fantasy",
+        "publication_year": 1998,
+        "ISBN": "9780439064866",
+        "quantity": 5,
+        "image": {
+            "cover": "https://i.ibb.co/25y0W88/A79-BB485-5-A7-B-4100-8661-3-A4647-E70-BAF-IMG400.jpg",
+            "page_demo": "https://i.ibb.co/VvrJTHQ/img-4978.jpg"
+        },
+        "short_description": "The second magical year at Hogwarts.",
+        "description": "In 'Harry Potter and the Chamber of Secrets,' Harry returns to Hogwarts for his second year, only to discover that dark forces are at work. The legend of the Chamber of Secrets is linked to a monster that threatens the students, and Harry must uncover the truth to save the school.",
+        "rating": {
+            "rate": 4.8,
+            "count": 64
+        }
+    },
+    {
+        "id": 49,
+        "title": "Fahrenheit 451",
+        "author": "Ray Bradbury",
+        "category": "Dystopian",
+        "publication_year": 1953,
+        "ISBN": "9781451673319",
+        "quantity": 6,
+        "image": {
+            "cover": "https://i.ibb.co/pvp6Wm4/MV5-BZm-M1-ZGJk-ZDgt-Nz-Bl-NS00-Yjky-LTk3-NGEt-ZTIx-MGVk-MTk2-Yjg1-Xk-Ey-Xk-Fqc-Gde-QXVy-MTMx-ODk2-O.jpg",
+            "page_demo": "https://i.ibb.co/r0VLmjB/151.jpg"
+        },
+        "short_description": "A world where books are banned and burned by firemen.",
+        "description": "Ray Bradbury's 'Fahrenheit 451' is a dystopian novel set in a future where books are banned, and firemen burn them. The story follows Guy Montag, a fireman who questions the oppressive society and seeks to preserve knowledge.",
+        "rating": {
+            "rate": 4.5,
+            "count": 65
+        }
+    },
+    {
+        "id": 50,
+        "title": "The Giver",
+        "author": "Lois Lowry",
+        "category": "Dystopian",
+        "publication_year": 1993,
+        "ISBN": "9780544336261",
+        "quantity": 5,
+        "image": {
+            "cover": "https://i.ibb.co/pQHWVXV/3636.jpg",
+            "page_demo": "https://i.ibb.co/1rTWBZG/52.jpg"
+        },
+        "short_description": "A society with no pain or emotions, but at a great cost.",
+        "description": "Lois Lowry's 'The Giver' is a dystopian novel set in a seemingly perfect society where pain and emotions are eradicated. The story follows Jonas, who discovers the dark truth behind his community's tranquility.",
+        "rating": {
+            "rate": 4.2,
+            "count": 60
+        }
+    },
+    {
+        "id": 51,
+        "title": "Divergent",
+        "author": "Veronica Roth",
+        "category": "Dystopian",
+        "publication_year": 2011,
+        "ISBN": "9780062024039",
+        "quantity": 5,
+        "image": {
+            "cover": "https://i.ibb.co/hXyLBKQ/220px-Divergent-book-by-Veronica-Roth-US-Hardcover-2011.jpg",
+            "page_demo": "https://i.ibb.co/80LpgbS/9e09468858b008cd92159c9f30237b35.jpg"
+        },
+        "short_description": "A society divided into factions based on personality traits.",
+        "description": "Veronica Roth's 'Divergent' is set in a dystopian society where individuals are divided into factions based on their personality traits. The story follows Beatrice Prior, who discovers she is Divergent and doesn't fit into a single faction, putting her life at risk.",
+        "rating": {
+            "rate": 4.1,
+            "count": 59
+        }
+    }
+]
