@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
-const { MongoClient, ServerApiVersion } = require("mongodb");
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 require("dotenv").config();
 
 const app = express();
@@ -47,6 +47,20 @@ async function run() {
       } catch (error) {
         console.log(error);
         res.status(500).json({ message: "Error Fetching Books" });
+      }
+    });
+
+    app.get("/bookDetails/:bookId", async (req, res) => {
+      const id = req.params.bookId;
+      const query = { _id: new ObjectId(id) };
+      try {
+        const result = await bookCollection.findOne(query);
+        res.send(result);
+      } catch (error) {
+        console.log(error);
+        res
+          .status(501)
+          .json({ message: "Error fetching Data. Server Error Occurred!" });
       }
     });
 
