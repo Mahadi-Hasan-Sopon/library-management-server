@@ -71,6 +71,27 @@ async function run() {
       }
     });
 
+    app.post("/allBorrowedBooksId", async (req, res) => {
+      const bookIds = req.body?.ids;
+      // console.log(bookIds);
+
+      const booksObjectId = bookIds?.map((bookId) => new ObjectId(bookId));
+      // console.log(booksObjectId);
+
+      const query = { _id: { $in: booksObjectId } };
+
+      try {
+        const result = await bookCollection.find(query).toArray();
+        // console.log(result);
+        res.send(result);
+      } catch (error) {
+        console.log(error);
+        res
+          .status(501)
+          .json({ message: "Error Getting Data. Server Error Occurred!" });
+      }
+    });
+
     app.get("/bookDetails/:bookId", async (req, res) => {
       const id = req.params.bookId;
       const query = { _id: new ObjectId(id) };
