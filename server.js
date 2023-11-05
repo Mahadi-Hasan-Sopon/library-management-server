@@ -80,8 +80,15 @@ async function run() {
 
       const query = { _id: { $in: booksObjectId } };
 
+      const options = {
+        // Sort returned documents in ascending order by title (A->Z)
+        sort: { title: 1 },
+        // Include only the `title` and `imdb` fields in each returned document
+        projection: { _id: 1, title: 1, image: 1, category: 1 },
+      };
+
       try {
-        const result = await bookCollection.find(query).toArray();
+        const result = await bookCollection.find(query, options).toArray();
         // console.log(result);
         res.send(result);
       } catch (error) {
