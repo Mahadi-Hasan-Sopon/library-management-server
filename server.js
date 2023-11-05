@@ -38,6 +38,7 @@ async function run() {
     const database = client.db("booksDB");
 
     const bookCollection = database.collection("books");
+    const borrowedCollection = database.collection("borrowedBooks");
 
     //   routes
     app.get("/allBook", async (req, res) => {
@@ -47,6 +48,26 @@ async function run() {
       } catch (error) {
         console.log(error);
         res.status(500).json({ message: "Error Fetching Books" });
+      }
+    });
+
+    app.patch("/allBook/:id", async (req, res) => {
+      const bookId = req.params.id;
+      const quantity = req.body?.quantity;
+      const filter = { _id: new ObjectId(bookId) };
+      const updatedBook = {
+        $set: {
+          quantity: quantity,
+        },
+      };
+      try {
+        const result = await bookCollection.updateOne(filter, updatedBook);
+        res.send(result);
+      } catch (error) {
+        console.log(error);
+        res
+          .status(501)
+          .json({ message: "Error Updating Data. Server Error Occurred!" });
       }
     });
 
@@ -61,6 +82,22 @@ async function run() {
         res
           .status(501)
           .json({ message: "Error fetching Data. Server Error Occurred!" });
+      }
+    });
+
+    app.post("/borrowed", async (req, res) => {
+      const info = req.body;
+      try {
+        const result = await borrowedCollection.insertOne({
+          ...info,
+          createdAt: new Date(),
+        });
+        res.send(result);
+      } catch (error) {
+        console.log(error);
+        res
+          .status(501)
+          .json({ message: "Error Creating Data. Server Error Occurred!" });
       }
     });
 
