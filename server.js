@@ -39,6 +39,7 @@ async function run() {
 
     const bookCollection = database.collection("books");
     const borrowedCollection = database.collection("borrowedBooks");
+    const categoryCollection = database.collection("categories");
 
     //   routes
     app.get("/allBook", async (req, res) => {
@@ -63,6 +64,31 @@ async function run() {
       try {
         const result = await bookCollection.updateOne(filter, updatedBook);
         res.send(result);
+      } catch (error) {
+        console.log(error);
+        res
+          .status(501)
+          .json({ message: "Error Updating Data. Server Error Occurred!" });
+      }
+    });
+
+    app.get("/categories", async (req, res) => {
+      try {
+        const categories = await categoryCollection.find().toArray();
+        res.send(categories);
+      } catch (error) {
+        console.log(error);
+        res
+          .status(501)
+          .json({ message: "Error Updating Data. Server Error Occurred!" });
+      }
+    });
+
+    app.get("/bestSellers", async (req, res) => {
+      const query = { tags: "best seller" };
+      try {
+        const bestSellers = await bookCollection.find(query).toArray();
+        res.send(bestSellers);
       } catch (error) {
         console.log(error);
         res
