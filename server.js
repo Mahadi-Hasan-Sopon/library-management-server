@@ -52,7 +52,7 @@ async function run() {
       }
     });
 
-    app.get("/allBook/:category", async (req, res) => {
+    app.get("/books/:category", async (req, res) => {
       const category = req.params?.category;
       const filter = { category: category };
       try {
