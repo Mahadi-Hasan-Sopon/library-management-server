@@ -84,15 +84,30 @@ async function run() {
       }
     });
 
+    app.delete("/allBook", async (req, res) => {
+      const email = req.query?.email;
+      const bookId = req.query?.bookId;
+      const query = { email: email, bookId: bookId };
+      try {
+        const result = await borrowedCollection.deleteOne(query);
+        res.send(result);
+      } catch (error) {
+        console.log(error);
+        res
+          .status(501)
+          .json({ message: "Error Deleting Book. Server Error Occurred!" });
+      }
+    });
+
     app.get("/categories", async (req, res) => {
       try {
         const categories = await categoryCollection.find().toArray();
         res.send(categories);
       } catch (error) {
         console.log(error);
-        res
-          .status(501)
-          .json({ message: "Error Updating Data. Server Error Occurred!" });
+        res.status(501).json({
+          message: "Error getting Categories. Server Error Occurred!",
+        });
       }
     });
 
@@ -103,9 +118,9 @@ async function run() {
         res.send(bestSellers);
       } catch (error) {
         console.log(error);
-        res
-          .status(501)
-          .json({ message: "Error Updating Data. Server Error Occurred!" });
+        res.status(501).json({
+          message: "Error getting Best Selling Books. Server Error Occurred!",
+        });
       }
     });
 
@@ -122,7 +137,7 @@ async function run() {
         // Sort returned documents in ascending order by title (A->Z)
         sort: { title: 1 },
         // Include only the `title` and `imdb` fields in each returned document
-        projection: { _id: 1, title: 1, image: 1, category: 1 },
+        projection: { _id: 1, title: 1, image: 1, category: 1, quantity: 1 },
       };
 
       try {
