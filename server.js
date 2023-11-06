@@ -52,6 +52,18 @@ async function run() {
       }
     });
 
+    app.get("/allBook/:category", async (req, res) => {
+      const category = req.params?.category;
+      const filter = { category: category };
+      try {
+        const result = await bookCollection.find(filter).toArray();
+        res.send(result);
+      } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: "Error Fetching Category Books" });
+      }
+    });
+
     app.patch("/allBook/:id", async (req, res) => {
       const bookId = req.params.id;
       const quantity = req.body?.quantity;
