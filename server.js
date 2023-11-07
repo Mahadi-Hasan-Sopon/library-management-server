@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
+const jwt = require("jsonwebtoken");
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 require("dotenv").config();
 
@@ -16,6 +17,27 @@ app.use(
 );
 app.use(express.json());
 app.use(cookieParser());
+
+const verifyToken = (req, res, next) => {
+  const token = req.cookies?.token;
+  if (!token) {
+    return res.status(401).send({ message: "Not Authorized" });
+  }
+  try {
+    jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, decoded) => {
+      if (err) {
+        console.log(err);
+        return res.status(401).send({ message: "Not Authorized" });
+      }
+      console.log("decoded", decoded);
+      req.user = decoded;
+      next();
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: "Error verifying token" });
+  }
+};
 
 const port = process.env.PORT || 5000;
 
@@ -41,8 +63,31 @@ async function run() {
     const borrowedCollection = database.collection("borrowedBooks");
     const categoryCollection = database.collection("categories");
 
+    // Authentication
+    app.post("/jwt", async (req, res) => {
+      const user = req.body;
+      // console.log(user);
+      try {
+        const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {
+          expiresIn: "1hr",
+        });
+        res
+          .cookie("token", token, {
+            httpOnly: true,
+            sameSite: "none",
+            secure: true,
+          })
+          .send({ message: "Token generated Successfully." });
+      } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: "Token generating failed." });
+      }
+    });
+
     //   routes
-    app.get("/allBook", async (req, res) => {
+    app.get("/allBook", verifyToken, async (req, res) => {
+      // console.log("token", req.cookies?.token);
+      // console.log("user in allBook", req.user);
       try {
         const result = await bookCollection.find().toArray();
         res.status(200).send(result);
