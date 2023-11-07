@@ -64,18 +64,19 @@ async function run() {
       }
     });
 
-    app.patch("/allBook/:id", async (req, res) => {
+    app.patch("/allBook/update/:id", async (req, res) => {
       const bookId = req.params.id;
-      const quantity = req.body?.quantity;
+      const body = req.body;
       const filter = { _id: new ObjectId(bookId) };
       const updatedBook = {
         $set: {
-          quantity: quantity,
+          ...body,
         },
       };
       try {
         const result = await bookCollection.updateOne(filter, updatedBook);
         res.send(result);
+        // res.send({ message: "testing" });
       } catch (error) {
         console.log(error);
         res
