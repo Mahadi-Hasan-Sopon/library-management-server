@@ -52,6 +52,17 @@ async function run() {
       }
     });
 
+    app.post("/allBook", async (req, res) => {
+      const book = req.body;
+      try {
+        const result = await bookCollection.insertOne(book);
+        res.send(result);
+      } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: "Error on Creating New Book!!!" });
+      }
+    });
+
     app.get("/books/:category", async (req, res) => {
       const category = req.params?.category;
       const filter = { category: category };
@@ -175,6 +186,21 @@ async function run() {
       res.send(result);
     });
 
+    app.get("/borrowedBooks/:id", async (req, res) => {
+      const email = req.query?.email;
+      const id = req.params.id;
+      const query = { bookId: id, email: email };
+      try {
+        const result = await borrowedCollection.findOne(query);
+        res.send(result);
+      } catch (error) {
+        console.log(error);
+        res
+          .status(501)
+          .json({ message: "Error Creating Data. Server Error Occurred!" });
+      }
+    });
+
     app.post("/borrowed", async (req, res) => {
       const info = req.body;
       try {
@@ -205,6 +231,6 @@ app.get("/", (req, res) =>
   res.send("<h1><center>Hello from Server</center></h1>")
 );
 
-app.listen(port, (req, res) => {
+app.listen(port, () => {
   console.log(`Encyclopaedia Server running at ${port}`);
 });
