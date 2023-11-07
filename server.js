@@ -10,9 +10,14 @@ const app = express();
 // middlewares
 app.use(
   cors({
-    origin: ["*", "http://localhost:5173"],
+    origin: [
+      "*",
+      "http://localhost:5173",
+      "https://encyclopaedia-97061.web.app",
+    ],
     credentials: true,
     optionsSuccessStatus: 200,
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
   })
 );
 app.use(express.json());
@@ -141,10 +146,15 @@ async function run() {
       }
     });
 
-    app.delete("/allBook", async (req, res) => {
+    app.delete("/allBook", verifyToken, async (req, res) => {
       const email = req.query?.email;
       const bookId = req.query?.bookId;
       const query = { email: email, bookId: bookId };
+
+      if (req.query?.email !== req.user?.email) {
+        return res.status(403).send({ message: "Forbidden Access" });
+      }
+
       try {
         const result = await borrowedCollection.deleteOne(query);
         res.send(result);
@@ -223,18 +233,26 @@ async function run() {
       }
     });
 
-    app.get("/borrowedBooks", async (req, res) => {
+    app.get("/borrowedBooks", verifyToken, async (req, res) => {
       const email = req.query?.email;
-      console.log(email);
+      // console.log(email);
+      if (req.query?.email !== req.user?.email) {
+        return res.status(403).send({ message: "Forbidden Access" });
+      }
       const filter = { email: email };
       const result = await borrowedCollection.find(filter).toArray();
       res.send(result);
     });
 
-    app.get("/borrowedBooks/:id", async (req, res) => {
+    app.get("/borrowedBooks/:id", verifyToken, async (req, res) => {
       const email = req.query?.email;
       const id = req.params.id;
       const query = { bookId: id, email: email };
+
+      if (req.query?.email !== req.user?.email) {
+        return res.status(403).send({ message: "Forbidden Access" });
+      }
+
       try {
         const result = await borrowedCollection.findOne(query);
         res.send(result);
@@ -242,7 +260,7 @@ async function run() {
         console.log(error);
         res
           .status(501)
-          .json({ message: "Error Creating Data. Server Error Occurred!" });
+          .json({ message: "Error getting Data. Server Error Occurred!" });
       }
     });
 
