@@ -44,6 +44,29 @@ const verifyToken = (req, res, next) => {
   }
 };
 
+const verifyAdminToken = (req, res, next) => {
+  const adminToken = req.cookies?.adminToken;
+  console.log("admin Token", adminToken);
+  if (!adminToken) {
+    return res.status(401).send({ message: "UnAuthorized Admin Account" });
+  }
+
+  try {
+    jwt.verify(adminToken, process.env.ACCESS_TOKEN_SECRET, (err, decoded) => {
+      if (err) {
+        console.log(err);
+        return res.status(401).send({ message: "Not Authorized" });
+      }
+      console.log("decoded Admin", decoded?.email);
+      req.admin = decoded;
+      next();
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: "Error verifying token" });
+  }
+};
+
 const port = process.env.PORT || 5000;
 
 const uri = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster0.kx7txjc.mongodb.net/?retryWrites=true&w=majority`;
@@ -67,6 +90,7 @@ async function run() {
     const bookCollection = database.collection("books");
     const borrowedCollection = database.collection("borrowedBooks");
     const categoryCollection = database.collection("categories");
+    const adminCollection = database.collection("admins");
 
     // Authentication
     app.post("/jwt", async (req, res) => {
@@ -89,6 +113,35 @@ async function run() {
       }
     });
 
+    // admin authentication
+    app.post("/admin", async (req, res) => {
+      const body = req.body;
+      const user = { ...body, role: "admin" };
+      console.log(user);
+      try {
+        const adminToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {
+          expiresIn: "1hr",
+        });
+
+        if (adminToken) {
+          const isExist = await adminCollection.findOne({ email: user.email });
+          if (!isExist) {
+            await adminCollection.insertOne(user);
+          }
+        }
+        res
+          .cookie("adminToken", adminToken, {
+            httpOnly: true,
+            sameSite: "none",
+            secure: true,
+          })
+          .send({ message: "Admin Login Successfully." });
+      } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: "Admin Token generating failed." });
+      }
+    });
+
     //   routes
     app.get("/allBook", verifyToken, async (req, res) => {
       // console.log("token", req.cookies?.token);
@@ -102,8 +155,12 @@ async function run() {
       }
     });
 
-    app.post("/allBook", async (req, res) => {
+    app.post("/allBook", verifyAdminToken, async (req, res) => {
       const book = req.body;
+      console.log(req.query);
+      if (req.query?.email !== req.admin?.email) {
+        return res.status(403).send({ message: "Forbidden Access - Admin" });
+      }
       try {
         const result = await bookCollection.insertOne(book);
         res.send(result);
@@ -125,7 +182,10 @@ async function run() {
       }
     });
 
-    app.patch("/allBook/update/:id", async (req, res) => {
+    app.patch("/allBook/update/:id", verifyAdminToken, async (req, res) => {
+      if (req.query?.email !== req.admin?.email) {
+        return res.status(403).send({ message: "Forbidden Access - Admin" });
+      }
       const bookId = req.params.id;
       const body = req.body;
       const filter = { _id: new ObjectId(bookId) };
