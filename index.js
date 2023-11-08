@@ -14,6 +14,7 @@ app.use(
       "https://encyclopaedia-97061.web.app",
       "https://encyclopaedia.surge.sh",
       "http://encyclopaedia.surge.sh",
+      "http://localhost:5173",
       "*",
     ],
     credentials: true,
@@ -141,6 +142,13 @@ async function run() {
         console.log(error);
         res.status(500).json({ message: "Admin Token generating failed." });
       }
+    });
+
+    // SignOut User
+    app.post("/logOut", async (req, res) => {
+      res.clearCookie("adminToken");
+      res.cookie("token", "", { expires: new Date(0) });
+      res.status(200).json({ message: "Logged out User from server..." });
     });
 
     //   routes
@@ -308,8 +316,7 @@ async function run() {
     app.get("/borrowedBooks/:id", verifyToken, async (req, res) => {
       const email = req.query?.email;
       const id = req.params.id;
-      console.log("in borrowedBooks/:id", email);
-      console.log("in borrowedBooks/:id", id);
+
       const query = { bookId: id, email: email };
 
       if (req.query?.email !== req.user?.email) {
