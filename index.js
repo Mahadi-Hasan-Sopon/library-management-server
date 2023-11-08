@@ -247,6 +247,8 @@ async function run() {
     app.get("/borrowedBooks/:id", verifyToken, async (req, res) => {
       const email = req.query?.email;
       const id = req.params.id;
+      console.log("in borrowedBooks/:id", email);
+      console.log("in borrowedBooks/:id", id);
       const query = { bookId: id, email: email };
 
       if (req.query?.email !== req.user?.email) {
