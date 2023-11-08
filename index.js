@@ -11,9 +11,10 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "*",
-      "http://localhost:5173",
       "https://encyclopaedia-97061.web.app",
+      "https://encyclopaedia.surge.sh",
+      "http://encyclopaedia.surge.sh",
+      "*",
     ],
     credentials: true,
     optionsSuccessStatus: 200,
