@@ -119,13 +119,13 @@ async function run() {
     app.post("/admin", async (req, res) => {
       const body = req.body;
       const isExist = await adminCollection.findOne({ email: body.email });
-      console.log(isExist);
+      // console.log(isExist);
 
       if (!isExist) {
         return res.status(403).send({ message: "Not an admin.", role: "user" });
       }
       const user = { ...body, role: "admin" };
-      console.log(user);
+      // console.log(user);
       try {
         const adminToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {
           expiresIn: "1hr",
@@ -142,6 +142,16 @@ async function run() {
         console.log(error);
         res.status(500).json({ message: "Admin Token generating failed." });
       }
+    });
+
+    app.post("/isAdmin", async (req, res) => {
+      const body = req.body;
+      const query = { uid: body.uid };
+      const result = await adminCollection.findOne(query);
+      if (result) {
+        return res.status(200).json({ role: result.role });
+      }
+      res.status(200).json({ role: "user" });
     });
 
     // SignOut User
@@ -191,7 +201,28 @@ async function run() {
       }
     });
 
-    app.patch("/allBook/update/:id", verifyAdminToken, async (req, res) => {
+    app.put("/allBook/:id", verifyAdminToken, async (req, res) => {
+      const bookId = req.params.id;
+      const body = req.body;
+      const filter = { _id: new ObjectId(bookId) };
+      const updatedBook = {
+        $set: {
+          ...body,
+        },
+      };
+      try {
+        const result = await bookCollection.updateOne(filter, updatedBook);
+        res.send(result);
+        // res.send({ message: "testing" });
+      } catch (error) {
+        console.log(error);
+        res
+          .status(501)
+          .json({ message: "Error Updating Data. Server Error Occurred!" });
+      }
+    });
+
+    app.patch("/allBook/update/:id", verifyToken, async (req, res) => {
       if (req.query?.email !== req.admin?.email) {
         return res.status(403).send({ message: "Forbidden Access - Admin" });
       }
