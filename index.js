@@ -11,6 +11,7 @@ const app = express();
 app.use(
   cors({
     origin: [
+      "https://encyclopaedia-97061.firebaseapp.com",
       "https://encyclopaedia-97061.web.app",
       "https://encyclopaedia.surge.sh",
       "http://encyclopaedia.surge.sh",
