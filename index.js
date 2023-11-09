@@ -200,13 +200,30 @@ async function run() {
       }
     });
 
-    app.put("/allBook/:id", verifyAdminToken, async (req, res) => {
-      const bookId = req.params.id;
+    //https://encyclopaedia-server.vercel.app/allBook/admin/${book._id}
+    /**
+     *  const updatedBook = {
+      title,
+      author,
+      category,
+      quantity: parseInt(quantity),
+      rating: { rate: parseFloat(rate) },
+      image: { cover: cover },
+    };
+     */
+    app.post("/allBook/admin/:bookId", verifyAdminToken, async (req, res) => {
+      const bookId = req.params.bookId;
       const body = req.body;
+      console.log(body);
       const filter = { _id: new ObjectId(bookId) };
       const updatedBook = {
         $set: {
-          ...body,
+          title: body.title,
+          author: body.author,
+          category: body.category,
+          quantity: body.quantity,
+          rating: { rate: body.rating?.rate },
+          image: { cover: body.image?.cover },
         },
       };
       try {
