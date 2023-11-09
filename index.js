@@ -36,7 +36,7 @@ const verifyToken = (req, res, next) => {
         console.log(err);
         return res.status(401).send({ message: "Not Authorized" });
       }
-      console.log("decoded", decoded);
+      console.log("decoded user", decoded);
       req.user = decoded;
       next();
     });
@@ -50,7 +50,7 @@ const verifyAdminToken = (req, res, next) => {
   const adminToken = req.cookies?.adminToken;
   console.log("admin Token", adminToken);
   if (!adminToken) {
-    return res.status(401).send({ message: "UnAuthorized Admin Account" });
+    return res.status(401).send({ message: "UnAuthorized Admin." });
   }
 
   try {
@@ -59,7 +59,7 @@ const verifyAdminToken = (req, res, next) => {
         console.log(err);
         return res.status(401).send({ message: "Not Authorized" });
       }
-      console.log("decoded Admin", decoded?.email);
+      console.log("decoded Admin", decoded);
       req.admin = decoded;
       next();
     });
@@ -118,6 +118,12 @@ async function run() {
     // admin authentication
     app.post("/admin", async (req, res) => {
       const body = req.body;
+      const isExist = await adminCollection.findOne({ email: body.email });
+      console.log(isExist);
+
+      if (!isExist) {
+        return res.status(403).send({ message: "Not an admin.", role: "user" });
+      }
       const user = { ...body, role: "admin" };
       console.log(user);
       try {
@@ -125,19 +131,13 @@ async function run() {
           expiresIn: "1hr",
         });
 
-        if (adminToken) {
-          const isExist = await adminCollection.findOne({ email: user.email });
-          if (!isExist) {
-            await adminCollection.insertOne(user);
-          }
-        }
         res
           .cookie("adminToken", adminToken, {
             httpOnly: true,
             sameSite: "none",
             secure: true,
           })
-          .send({ message: "Admin Login Successfully." });
+          .send({ message: "Admin Login Successfully.", role: "admin" });
       } catch (error) {
         console.log(error);
         res.status(500).json({ message: "Admin Token generating failed." });
