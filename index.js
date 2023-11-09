@@ -15,8 +15,6 @@ app.use(
       "https://encyclopaedia.surge.sh",
       "http://encyclopaedia.surge.sh",
       "http://localhost:5173",
-      "*",
-      true,
     ],
     credentials: true,
     optionsSuccessStatus: 200,
